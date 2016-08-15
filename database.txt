@@ -1,0 +1,255 @@
+1)Content
+	id,
+
+	title,
+	subtitle,
+	category_id,
+	unique_key,
+	content,
+	more_content,
+	hyper_link,
+
+	creator,
+	updater,
+	deleted_at,
+	updated_at,
+	created_at
+category
+	id,
+
+	category, 
+
+	creator,
+	updater,
+	deleted_at,
+	updated_at,
+	created_at
+*)licence_types
+	id
+
+	licence_type
+*)subjects
+	id
+
+	licence_type_id
+	subject
+
+*)chapters
+	id
+	licence_type_id
+	subject_id
+	chapter
+	
+2)Documents
+	table_name,
+	mother_id,
+	calling_id,
+	doc_type,
+	doc_title,
+	doc_name,
+	doc_description,
+
+	creator,
+	updater,
+	deleted_at,
+	updated_at,
+	created_at
+
+3)contact_info
+	id
+
+	email
+	mailling_address
+	phone
+	mobile
+	fax
+	gps_latitude
+	gps_longitude
+	
+
+	
+	creator,
+	updator,
+	created_at,
+	updated_at,
+	soft_delete
+
+3)contact_archive
+	id
+
+	name
+	email
+	subject
+	body
+
+
+
+4)users
+	id
+	
+	Name
+	email
+	role_id
+	password
+	active 
+
+Role
+	id
+
+	role
+
+	creator,
+	updater,
+	deleted_at,
+	updated_at,
+	created_at
+5)personal_info
+	id 
+
+	user_id
+	name
+	full_name
+	father_name
+	mother_name
+	date_of_birth
+	nationality
+	passport_no
+	validity_date
+	parmanent_address
+	mailing_address
+	gender
+
+	photo
+
+
+6)accademic_info
+	id
+
+	user_id
+	academic_degree
+	institute
+	subject
+	result	
+
+
+7)professional_info
+	id
+
+	user_id
+	date_of_first_training_flight
+	defense_personnel
+	defense_category
+	having_spl_or_not
+	date_of_issue_of_spl
+	having_higher_category_pilot_license
+	license_category
+	license_number
+	license_validity
+	endorsement_of_multi_engine_aircraft
+	total_flying_hour
+	total_flying_hour_as_pilot_in_command
+	flying_training_institute
+	ground_training_institute
+
+
+
+
+
+8)exam_schedule
+	id
+
+	title
+	licence_type
+	subject
+	exam_date
+	start_time
+	end_time
+	total_question
+	note
+
+
+9)question_bank
+	id
+
+	licence_type
+	subject
+	chapter
+	question
+
+	option_1
+	option_2
+	option_3
+	option_4
+
+	option_right
+
+	//image
+
+	note
+
+
+10)exam_question
+	id
+
+	exam_id
+	license_type
+	subject
+	chapter
+	question
+
+	option_1
+	option_2
+	option_3
+	option_4
+
+	option_right
+
+	image
+
+	note
+
+
+11)exam_examiner
+	id
+
+	exam_id
+	user_id
+
+12)result
+	id
+
+	user_id
+	exam_id
+	license_type
+	subject
+	total_marks
+	obtained_marks
+
+13)licence_type
+	id 
+
+	type_name
+
+14)subject
+	id 
+
+	type_name
+	subject
+15)chapter
+	id 
+
+	type_name
+	subject
+	chapter
+
+16)payments
+	id,
+
+	exam_id
+	user_id
+	fee_type,
+	doc_number,
+	bank,
+	branch,
+	account_name,
+
