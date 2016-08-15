@@ -5,7 +5,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <b>Pending Registration Request</b>
+                            <b>Pending Registration  Request</b>
                             <div class="pull-right">
                             @if($singleRegister)
                                 @if($singleRegister->reg_status!=1)
